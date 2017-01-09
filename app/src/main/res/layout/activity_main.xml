@@ -11,10 +11,10 @@
     tools:context="com.class_creator.classcreator.MainActivity">
 
     <TextView
-        android:id="@+id/hello_world"
+        android:id="@+id/test"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="hello world">
+        android:text="test">
     </TextView>
 
 
