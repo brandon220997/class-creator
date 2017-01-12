@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:text=" Class \n Creator"
         android:gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="45sp"
 
         android:textColor="@color/colorPrimaryDark">
     </TextView>
