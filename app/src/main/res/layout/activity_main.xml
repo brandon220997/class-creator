@@ -28,12 +28,13 @@
     android:layout_weight="1"
     >
     <Button
+        android:id="@+id/createclass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_class"
         android:layout_centerInParent="true"
         android:textSize="36sp"
-        android:id="@+id/createclass">
+        >
     </Button>
 </RelativeLayout>
 <RelativeLayout
@@ -41,12 +42,13 @@
     android:layout_height="wrap_content"
     android:layout_weight="1">
     <Button
+        android:id="@+id/settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/settings"
         android:textSize="36sp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/settings">
+        >
     </Button>
 </RelativeLayout>
 
