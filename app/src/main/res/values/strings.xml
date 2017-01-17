@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Class Creator</string>
     <string name="back">Back</string>>
-    <string name="create_class">Create Class</string>>
-    <string name="settings">Settings</string>>
+    <string name="create_class">Create Class</string>
+    <string name="settings">Settings</string>
+    <string name="addclass">Add Class</string>
 </resources>

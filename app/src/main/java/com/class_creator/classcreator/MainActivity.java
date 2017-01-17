@@ -12,9 +12,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button createClassButton = (Button) findViewById(R.id.createclass);
+        Button classCreatorButton = (Button) findViewById(R.id.classcreator);
 
-        createClassButton.setOnClickListener(new View.OnClickListener(){
+        classCreatorButton.setOnClickListener(new View.OnClickListener(){
             @Override
                 public void onClick(View view){
                 launchClassCreatorActivity();
