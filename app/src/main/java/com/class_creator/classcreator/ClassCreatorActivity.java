@@ -1,5 +1,6 @@
 package com.class_creator.classcreator;
 
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -24,7 +25,7 @@ public class ClassCreatorActivity extends AppCompatActivity {
 
         relativeLayout = (RelativeLayout) findViewById(R.id.relativelayout);
         Button backButton = (Button) findViewById(R.id.back);
-        Button addClassButton = (Button) findViewById(R.id.addclass);
+        final Button addClassButton = (Button) findViewById(R.id.addclass);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,16 +41,10 @@ public class ClassCreatorActivity extends AppCompatActivity {
                 layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
                 ViewGroup container = (ViewGroup) layoutInflater.inflate(R.layout.popup_add_class,null);
 
-                addClassPopup = new PopupWindow(container,500,500,true);
+                addClassPopup = new PopupWindow(container,1000,1000,true);
+                addClassPopup.setOutsideTouchable(true);
                 addClassPopup.showAtLocation(relativeLayout, Gravity.NO_GRAVITY,500,500);
 
-                container.setOnTouchListener(new View.OnTouchListener(){
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        addClassPopup.dismiss();
-                        return true;
-                    }
-                    });
             }
         });
 
