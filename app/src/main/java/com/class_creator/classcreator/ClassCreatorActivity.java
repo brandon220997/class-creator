@@ -1,11 +1,9 @@
 package com.class_creator.classcreator;
 
-import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -25,7 +23,7 @@ public class ClassCreatorActivity extends AppCompatActivity {
 
         relativeLayout = (RelativeLayout) findViewById(R.id.relativelayout);
         Button backButton = (Button) findViewById(R.id.back);
-        final Button addClassButton = (Button) findViewById(R.id.addclass);
+        Button addClassButton = (Button) findViewById(R.id.addclass);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,10 +38,12 @@ public class ClassCreatorActivity extends AppCompatActivity {
             public void onClick(View view){
                 layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
                 ViewGroup container = (ViewGroup) layoutInflater.inflate(R.layout.popup_add_class,null);
+                int height = relativeLayout.getHeight();
+                int width = relativeLayout.getWidth();
 
-                addClassPopup = new PopupWindow(container,1000,1000,true);
+                addClassPopup = new PopupWindow(container, width, height, true);
                 addClassPopup.setOutsideTouchable(true);
-                addClassPopup.showAtLocation(relativeLayout, Gravity.NO_GRAVITY,500,500);
+                addClassPopup.showAtLocation(relativeLayout, Gravity.CENTER,0,0);
 
             }
         });
